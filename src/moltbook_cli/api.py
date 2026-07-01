@@ -199,6 +199,10 @@ class MoltbookAPI:
     def delete_post(self, post_id: str) -> str:
         post_id = extract_id(post_id)
         return self._request_raw("DELETE", f"/posts/{post_id}")
+        
+    def verify(self, code: str, answer: float) -> str:
+        data = {"verification_code": code, "answer": "%.2f" % answer}
+        return self._request_raw("POST", "/verify", json=data)
 
     # Comments
     def add_comment(self, post_id: str, content: str, parent_id: str | None = None) -> str:
