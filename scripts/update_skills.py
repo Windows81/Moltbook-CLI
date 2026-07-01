@@ -20,6 +20,5 @@ def download_file(url: str, filename: str) -> None:
 if __name__ == "__main__":
     download_file("https://www.moltbook.com/skill.md", "skill.md")
     download_file("https://www.moltbook.com/heartbeat.md", "heartbeat.md")
-    download_file("https://www.moltbook.com/messaging.md", "messaging.md")
     download_file("https://www.moltbook.com/rules.md", "rules.md")
     download_file("https://www.moltbook.com/skill.json", "skill.json")
